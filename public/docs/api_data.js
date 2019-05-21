@@ -897,5 +897,175 @@ define({ "api": [
     },
     "filename": "src/components/user/UserController.js",
     "groupTitle": "User"
-  }
+  },
+  {
+    "type": "post",
+    "url": "/category/all-categories/select-date",
+    "title": "Categories rating by date",
+    "name": "categoryies_rating",
+    "version": "1.0.0",
+    "group": "Tracker",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "Response",
+            "description": "<p>Retrieves rating of the individual for the selected date.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "type": "String",
+            "optional": false,
+            "field": "Response",
+            "description": "<p>An internal Server error has occured!</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "date",
+            "description": "<p>Date of the day selected. If no date is selected, it retrieves the data for the current date</p>"
+          },
+        ]
+      }
+    },
+    "filename": "src/components/tracker/trackerController.js",
+    "groupTitle": "Tracker"
+  },
+  {
+    "type": "post",
+    "url": "/category/select-date/:categoryId",
+    "title": "Category rating by date",
+    "name": "category_rating",
+    "version": "1.0.0",
+    "group": "Tracker",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "Response",
+            "description": "<p>Retrieves rating of the individual for the selected date</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "type": "String",
+            "optional": false,
+            "field": "Response",
+            "description": "<p>An internal Server error has occured!</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": true,
+            "field": "date",
+            "description": "<p>Date of the day selected. If no date is selected, it retrieves rating for the present date</p>"
+          },
+        ]
+      }
+    },
+    "filename": "src/components/tracker/trackerController.js",
+    "groupTitle": "Tracker"
+  },
+  {
+    "type": "post",
+    "url": "/category/all-date/:categoryId",
+    "title": "Category rating for all days",
+    "name": "category_all_days",
+    "version": "1.0.0",
+    "group": "Tracker",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "Response",
+            "description": "<p>Retrieves rating of the individual for all days recorded.</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "type": "String",
+            "optional": false,
+            "field": "Response",
+            "description": "<p>An internal Server error has occured!</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/components/tracker/trackerController.js",
+    "groupTitle": "Tracker"
+  },
+  {
+    "type": "post",
+    "url": "/category/all-categories/all-date",
+    "title": "categories ratings for all dates",
+    "name": "categories_ratings_all_days",
+    "version": "1.0.0",
+    "group": "Tracker",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "Response",
+            "description": "<p>Retrieves rating of the individual for all days recorded</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "Error 4xx": [
+          {
+            "group": "Error 4xx",
+            "type": "String",
+            "optional": false,
+            "field": "Response",
+            "description": "<p>An internal Server error has occured!</p>"
+          }
+        ]
+      }
+    },
+    "filename": "src/components/tracker/trackerController.js",
+    "groupTitle": "Tracker"
+  },
 ] });
